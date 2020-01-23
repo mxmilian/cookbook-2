@@ -3,7 +3,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -13,7 +15,17 @@ body {
   background-color: $base-color;
   font-family: "Fira Code", sans-serif;
   color: white;
-  padding: 100px 50px;
+  padding: 50px 50px;
+}
+
+.button {
+  background-color: white;
+  border: none;
+  font-size: 12px;
+  font-family: "Fira Code", sans-serif;
+  padding: 10px 19px;
+  font-weight: bold;
+  display: block;
 }
 
 .info {
@@ -27,9 +39,9 @@ body {
   }
 
   &__paragraph {
-    margin: 0;
     font-size: 21px;
     font-weight: normal;
+    margin-bottom: 30px;
   }
 }
 
@@ -38,22 +50,53 @@ body {
   padding: 0;
   display: flex;
 
-
-  &__item {
-
-  }
-
   &__button {
-    font-size: 12px;
-    font-family: 'Fira Code', sans-serif;
     background: transparent;
+    font-weight: normal;
     padding: 10px 30px;
-    color: white;
     border: 1px solid white;
+    color: white;
 
     &--active {
       background-color: white;
       color: $base-color;
     }
+  }
+}
+
+.container {
+  padding-top: 100px;
+}
+
+.item {
+  border: 2px solid white;
+  display: grid;
+  min-height: 400px;
+  grid-template-rows: 100px 1fr;
+
+  &__header {
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 30px;
+  }
+
+  &__title {
+    color: $base-color;
+    font-size: 21px;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px 25px;
+    align-items: center;
+  }
+
+  &__paragraph,
+  &__button {
+    font-size: 14px;
   }
 }
