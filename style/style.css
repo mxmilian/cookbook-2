@@ -13,7 +13,7 @@ body {
   background-color: #171717;
   font-family: "Fira Code", sans-serif;
   color: white;
-  padding: 50px 50px;
+  padding: 50px;
 }
 
 .button {
@@ -44,7 +44,9 @@ body {
 .filters {
   list-style: none;
   padding: 0;
-  display: flex;
+  display: grid;
+  grid-gap: 0;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 120px));
 }
 .filters__button {
   background: transparent;
@@ -52,6 +54,7 @@ body {
   padding: 10px 30px;
   border: 1px solid white;
   color: white;
+  width: 120px;
 }
 .filters__button--active {
   background-color: white;
@@ -60,6 +63,9 @@ body {
 
 .container {
   padding-top: 100px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 100px 50px;
 }
 
 .item {
@@ -88,6 +94,12 @@ body {
 }
 .item__paragraph, .item__button {
   font-size: 14px;
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 50px 25px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
