@@ -15,6 +15,43 @@ body {
   background-color: $base-color;
   font-family: "Fira Code", sans-serif;
   color: white;
+  padding: 0;
+  margin: 0;
+}
+
+.navigation {
+  position: fixed;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 20px 60px;
+  background: $base-color;
+}
+
+.logo {
+  font-size: 21px;
+  font-weight: bold;
+}
+
+.link {
+  color: white;
+  text-decoration: none;
+}
+
+.menu {
+  display: flex;
+
+  &__item {
+    font-size: 16px;
+    list-style: none;
+    padding-right: 20px;
+  }
+}
+
+
+.content {
   padding: 50px;
 }
 
@@ -107,8 +144,3 @@ body {
   }
 }
 
-@media (max-width: 600px) {
-  body {
-    padding: 50px 25px;
-  }
-}
