@@ -1,6 +1,11 @@
 * {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  input:focus,
+  textarea:focus,
+  select:focus {
+    outline: none;
+  }
 }
 
 *,
@@ -49,7 +54,6 @@ body {
     padding-right: 20px;
   }
 }
-
 
 .content {
   padding: 50px;
@@ -144,3 +148,90 @@ body {
   }
 }
 
+.form-container {
+  height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-box {
+  width: 459px;
+  height: 493px;
+  padding: 30px 55px;
+  border: 2px solid white;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  text-align: center;
+
+  &__title {
+    margin-top: 30px;
+    font-size: 21px;
+    margin-bottom: 0;
+  }
+
+  &__paragraph {
+    font-size: 14px;
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__input {
+    font-family: "Fira Code", sans-serif;
+    font-size: 16px;
+    color: white;
+    margin: 15px 0;
+    background: none;
+    border: none;
+    border-bottom: 1px solid hsla(0, 0%, 100%, 0.5);
+    width: 234px;
+  }
+
+  &__button {
+    margin-top: 50px;
+    margin-bottom: 10px;
+    cursor: cell;
+  }
+
+  &__checkbox {
+    -webkit-appearance: none;
+    background-color: transparent;
+    border: 1px solid #cacece;
+    padding: 5px;
+    display: inline-block;
+    margin-right: 8px;
+    cursor: cell;
+  }
+
+  &__checkbox:checked:active {
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05),
+      inset 0px 1px 3px rgba(0, 0, 0, 0.1);
+  }
+
+  &__checkbox:checked {
+    background-color: #e9ecee;
+    border: 1px solid #adb8c0;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05),
+      inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05),
+      inset 15px 10px -12px rgba(255, 255, 255, 0.1);
+    color: #99a1a7;
+  }
+
+  &__checkbox-label {
+    font-size: 10px;
+    cursor: cell;
+  }
+}
+
+.check {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: cell;
+}
